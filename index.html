@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>BRITVA — регистрация на мероприятие</title>
+  <style>
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #111;
+      color: #f5f3ed;
+      font-family: Arial, sans-serif;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 28px;
+      background:
+        radial-gradient(ellipse at 80% 20%, #39412f 0%, transparent 40%),
+        linear-gradient(135deg, #171717, #090909);
+    }
+
+    .container {
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 0 24px;
+      border-bottom: 1px solid #454545;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+    .logo {
+      color: #d0ddb9;
+      font-size: 20px;
+      font-weight: 800;
+      letter-spacing: 3px;
+    }
+
+    .hero { padding: 100px 0 80px; }
+
+    .eyebrow {
+      color: #d0ddb9;
+      font-size: 12px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+    }
+
+    h1 {
+      margin: 22px 0;
+      font-size: clamp(68px, 15vw, 160px);
+      line-height: .9;
+      letter-spacing: -.07em;
+    }
+
+    .description {
+      max-width: 600px;
+      color: #c4c4be;
+      font-size: clamp(18px, 3vw, 25px);
+      line-height: 1.5;
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 32px 0;
+    }
+
+    .tag {
+      border: 1px solid #52544b;
+      padding: 12px 16px;
+      border-radius: 30px;
+      color: #deded7;
+      font-size: 13px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 18px 28px;
+      background: #d0ddb9;
+      color: #111;
+      border-radius: 3px;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    .button:hover { background: #e2edcf; }
+
+    .section {
+      padding: 32px 0;
+      border-top: 1px solid #454545;
+    }
+
+    .section h2 { font-size: 28px; }
+
+    .section p {
+      max-width: 650px;
+      color: #c4c4be;
+      line-height: 1.7;
+    }
+
+    footer {
+      padding-top: 30px;
+      color: #85857f;
+      font-size: 12px;
+    }
+
+    @media (max-width: 600px) {
+      .page { padding: 20px; }
+      .hero { padding: 75px 0 60px; }
+      header { font-size: 10px; }
+      .logo { font-size: 17px; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <header>
+        <div class="logo">BRITVA</div>
+        <div>PROFESSIONAL EVENT</div>
+      </header>
+
+      <section class="hero">
+        <div class="eyebrow">Встреча профессионалов</div>
+        <h1>BRITVA</h1>
+
+        <p class="description">
+          Пространство профессионалов, новых идей
+          и развития барбер-индустрии.
+        </p>
+
+        <div class="tags">
+          <span class="tag">Мастер-классы</span>
+          <span class="tag">Профессиональная косметика</span>
+          <span class="tag">Нетворкинг</span>
+        </div>
+
+        <a class="button" href="#registration">
+          Участвовать ↗
+        </a>
+      </section>
+
+      <section class="section">
+        <h2>Больше, чем мероприятие</h2>
+        <p>
+          Знакомьтесь с профессионалами индустрии,
+          открывайте новые продукты и получайте вдохновение
+          для развития своего дела.
+        </p>
+      </section>
+
+      <section class="section" id="registration">
+        <h2>Регистрация</h2>
+        <p>
+          Скоро здесь появится форма регистрации участников.
+          Следующий этап — подключение Google Sheets.
+        </p>
+      </section>
+
+      <footer>
+        BRITVA · PROFESSIONAL BARBER EVENT
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
