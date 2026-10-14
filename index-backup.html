@@ -1,1 +1,397 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#111111">
+  <title>BRITVA — регистрация</title>
+  <style>
+    * { box-sizing: border-box; }
 
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      background: #111;
+      color: #f5f3ed;
+      font-family: Arial, sans-serif;
+    }
+
+    .page {
+      min-height: 100vh;
+      padding: 28px 20px;
+      background:
+        radial-gradient(ellipse at 80% 15%, #39412f 0%, transparent 42%),
+        linear-gradient(135deg, #171717, #090909);
+    }
+
+    .container {
+      width: 100%;
+      max-width: 850px;
+      margin: auto;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      padding: 12px 0 22px;
+      border-bottom: 1px solid #454545;
+      font-size: 11px;
+      letter-spacing: 2px;
+    }
+
+    .logo {
+      color: #d0ddb9;
+      font-size: 20px;
+      font-weight: 800;
+    }
+
+    .hero { padding: 75px 0 55px; }
+
+    .eyebrow {
+      color: #d0ddb9;
+      font-size: 11px;
+      letter-spacing: 4px;
+    }
+
+    h1 {
+      margin: 20px 0;
+      font-size: clamp(64px, 14vw, 130px);
+      line-height: .9;
+      letter-spacing: -.07em;
+    }
+
+    h2 { font-size: 28px; }
+
+    p {
+      color: #c4c4be;
+      line-height: 1.65;
+    }
+
+    .description {
+      max-width: 560px;
+      font-size: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 15px;
+      padding: 17px 25px;
+      border: 0;
+      border-radius: 3px;
+      background: #d0ddb9;
+      color: #111;
+      font-size: 15px;
+      font-weight: bold;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .section {
+      padding: 28px 0;
+      border-top: 1px solid #454545;
+    }
+
+    form {
+      display: grid;
+      gap: 18px;
+      margin-top: 25px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+    }
+
+    label span {
+      display: block;
+      margin-bottom: 9px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #55594e;
+      border-radius: 4px;
+      outline: none;
+      background: #1b1c19;
+      color: #fff;
+      font: inherit;
+      font-size: 16px;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #d0ddb9;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .optional {
+      color: #999;
+      font-weight: normal;
+    }
+
+    .consent {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      color: #c4c4be;
+      font-size: 13px;
+      line-height: 1.5;
+    }
+
+    .consent input {
+      width: 18px;
+      height: 18px;
+      flex: 0 0 18px;
+      margin: 1px 0 0;
+      accent-color: #d0ddb9;
+    }
+
+    .consent a {
+      color: #d0ddb9;
+    }
+
+    .submit {
+      width: 100%;
+      margin-top: 0;
+    }
+
+    .submit:disabled {
+      opacity: .6;
+      cursor: wait;
+    }
+
+    #status {
+      min-height: 24px;
+      font-size: 14px;
+    }
+
+    footer {
+      padding-top: 30px;
+      color: #85857f;
+      font-size: 11px;
+    }
+
+    @media (max-width: 500px) {
+      .hero { padding: 55px 0 40px; }
+      .description { font-size: 17px; }
+      header { font-size: 9px; }
+    }
+    select {
+      width: 100%;
+      padding: 15px;
+      border: 1px solid #55594e;
+      border-radius: 4px;
+      outline: none;
+      background: #1b1c19;
+      color: #fff;
+      font: inherit;
+      font-size: 16px;
+    }
+
+    select:focus {
+      border-color: #d0ddb9;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+  
+  </style>
+</head>
+<body>
+  <main class="page">
+    <div class="container">
+      <header>
+        <div class="logo">BRITVA</div>
+        <div>PROFESSIONAL EVENT</div>
+      </header>
+
+      <section class="hero">
+        <div class="eyebrow">ВСТРЕЧА ПРОФЕССИОНАЛОВ</div>
+        <h1>BRITVA</h1>
+        <p class="description">
+          Пространство профессионалов, новых идей
+          и развития барбер-индустрии.
+        </p>
+        <a class="button" href="#registration">
+          Зарегистрироваться ↗
+        </a>
+      </section>
+
+      <section class="section">
+        <h2>Больше, чем мероприятие</h2>
+        <p>
+          Мастер-классы, профессиональная косметика,
+          новые знакомства и возможности для развития.
+        </p>
+      </section>
+
+      <section class="section" id="registration">
+        <h2>Регистрация участника</h2>
+        <p>Заполни форму, чтобы зарегистрироваться на мероприятие.</p>
+
+        <form
+          id="registrationForm"
+          action="https://script.google.com/macros/s/AKfycbwCsoKL9bTo9iTUjn_-5t3XFlmjEfpjAHeb6YLkNqpAKANapkBOfW0bDEDq9dZX5aXf6Q/exec"
+          method="POST"
+          target="submissionFrame">
+
+          <label>
+            <span>ФИО *</span>
+            <input name="fio" autocomplete="name"
+              required maxlength="150">
+          </label>
+
+          <label>
+            <span>Номер телефона *</span>
+            <input name="phone" type="tel"
+              autocomplete="tel" required maxlength="30">
+          </label>
+
+          <label>
+            <span>Электронная почта *</span>
+            <input name="email" type="email"
+              autocomplete="email" required maxlength="150">
+          </label>
+
+         
+<label>
+  <span>Барбершоп / адрес точки *</span>
+  <input
+    id="shopSearch"
+    name="address"
+    list="shopList"
+    placeholder="Начни вводить город или улицу..."
+    autocomplete="off"
+    required
+    maxlength="250">
+  <datalist id="shopList"></datalist>
+</label>
+
+         
+<label>
+  <span>Должность *</span>
+  <select id="positionSelect" required>
+    <option value="">Выбери должность</option>
+    <option value="Управляющий">Управляющий</option>
+    <option value="Владелец">Владелец</option>
+    <option value="Барбер">Барбер</option>
+    <option value="Администратор">Администратор</option>
+    <option value="Другое">Другое</option>
+  </select>
+  <input type="hidden" name="position" id="positionValue">
+</label>
+
+<label id="otherPositionLabel" hidden>
+  <span>Укажи свою должность *</span>
+  <input
+    id="otherPosition"
+    type="text"
+    placeholder="Например, территориальный управляющий"
+    maxlength="100">
+</label>
+
+
+          <label>
+            <span>Комментарий <span class="optional">(необязательно)</span></span>
+            <textarea name="comment" maxlength="1000"></textarea>
+          </label>
+
+          <label class="consent">
+            <input type="checkbox" name="consent" required>
+            <span>
+              Я даю согласие на обработку персональных данных
+              в соответствии с опубликованной политикой
+              конфиденциальности.
+            </span>
+          </label>
+
+          <button class="button submit" id="submitButton" type="submit">
+            Отправить заявку
+          </button>
+
+          <p id="status" role="status" aria-live="polite"></p>
+        </form>
+
+        <iframe name="submissionFrame"
+          id="submissionFrame"
+          title="Отправка заявки"
+          hidden></iframe>
+      </section>
+
+      <footer>BRITVA · PROFESSIONAL BARBER EVENT</footer>
+    </div>
+  </main>
+<script src="./shops.js"></script>
+  <script>
+    const form = document.getElementById('registrationForm');
+    const button = document.getElementById('submitButton');
+    const status = document.getElementById('status');
+    const frame = document.getElementById('submissionFrame');
+    let submitting = false;
+
+const shopSearch = document.getElementById('shopSearch');
+const shopList = document.getElementById('shopList');
+
+(window.shopAddresses || []).forEach(address => {
+  const option = document.createElement('option');
+  option.value = address;
+  shopList.appendChild(option);
+});
+
+const positionSelect = document.getElementById('positionSelect');
+const positionValue = document.getElementById('positionValue');
+const otherPositionLabel = document.getElementById('otherPositionLabel');
+const otherPosition = document.getElementById('otherPosition');
+
+function updatePosition() {
+  const isOther = positionSelect.value === 'Другое';
+
+  otherPositionLabel.hidden = !isOther;
+  otherPosition.required = isOther;
+  positionValue.value = isOther
+    ? otherPosition.value.trim()
+    : positionSelect.value;
+}
+
+positionSelect.addEventListener('change', updatePosition);
+otherPosition.addEventListener('input', updatePosition);
+
+    form.addEventListener('submit', function(event) {
+      if (submitting) {
+        event.preventDefault();
+        return;
+      }
+
+      if (!form.reportValidity()) {
+        event.preventDefault();
+        return;
+      }
+
+      submitting = true;
+      button.disabled = true;
+      button.textContent = 'Отправляем…';
+      status.textContent = 'Отправляем заявку. Не закрывай страницу…';
+    });
+
+    frame.addEventListener('load', function() {
+      if (!submitting) return;
+
+      status.textContent =
+        'Запрос отправлен. Проверяем, появилась ли заявка в базе…';
+
+      // Не объявляем регистрацию успешной только по факту отправки.
+      // Ответ Apps Script проверяется через Google Sheets.
+      button.disabled = false;
+      button.textContent = 'Отправить заявку';
+      submitting = false;
+    });
+  </script>
+</body>
+</html>
