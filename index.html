@@ -328,13 +328,40 @@
       <footer>BRITVA · PROFESSIONAL BARBER EVENT</footer>
     </div>
   </main>
-
+<script src="./shops.js"></script>
   <script>
     const form = document.getElementById('registrationForm');
     const button = document.getElementById('submitButton');
     const status = document.getElementById('status');
     const frame = document.getElementById('submissionFrame');
     let submitting = false;
+
+const shopSearch = document.getElementById('shopSearch');
+const shopList = document.getElementById('shopList');
+
+(window.shopAddresses || []).forEach(address => {
+  const option = document.createElement('option');
+  option.value = address;
+  shopList.appendChild(option);
+});
+
+const positionSelect = document.getElementById('positionSelect');
+const positionValue = document.getElementById('positionValue');
+const otherPositionLabel = document.getElementById('otherPositionLabel');
+const otherPosition = document.getElementById('otherPosition');
+
+function updatePosition() {
+  const isOther = positionSelect.value === 'Другое';
+
+  otherPositionLabel.hidden = !isOther;
+  otherPosition.required = isOther;
+  positionValue.value = isOther
+    ? otherPosition.value.trim()
+    : positionSelect.value;
+}
+
+positionSelect.addEventListener('change', updatePosition);
+otherPosition.addEventListener('input', updatePosition);
 
     form.addEventListener('submit', function(event) {
       if (submitting) {
