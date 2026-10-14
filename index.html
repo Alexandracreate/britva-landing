@@ -251,7 +251,95 @@ h1 {
 .button:hover {
   background: #ffffff;
 }
+```css
+/* LUXINA registration card */
+#registration {
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 0 20px 24px;
+}
 
+#registration h2 {
+  display: none;
+}
+
+#registration > p {
+  display: none;
+}
+
+#registrationForm {
+  background: #031303;
+  border-radius: 16px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+
+#registrationForm label {
+  display: block;
+  margin: 0;
+  color: #b8bdb3;
+  font-size: 13px;
+}
+
+#registrationForm label span {
+  display: block;
+  margin-bottom: 5px;
+}
+
+#registrationForm input,
+#registrationForm select,
+#registrationForm textarea {
+  box-sizing: border-box;
+  width: 100%;
+  background: #111111;
+  color: #ffffff;
+  border: 1px solid #c5c5c5;
+  border-radius: 5px;
+  padding: 12px;
+  font: inherit;
+  font-size: 14px;
+}
+
+#registrationForm input,
+#registrationForm select {
+  min-height: 41px;
+}
+
+#registrationForm textarea {
+  min-height: 68px;
+  resize: vertical;
+}
+
+#registrationForm input:focus,
+#registrationForm select:focus,
+#registrationForm textarea:focus {
+  outline: none;
+  border-color: #dcebc8;
+}
+
+#registrationForm button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 15px;
+  background: #145000;
+  color: #ffffff;
+  border: none;
+  border-radius: 10px;
+  font-size: 22px;
+  font-weight: 700;
+}
+
+#registrationForm button:hover {
+  background: #1c6500;
+}
+
+@media (max-width: 500px) {
+  #registrationForm {
+    padding: 20px;
+  }
+}
   </style>
 </head>
 <body>
